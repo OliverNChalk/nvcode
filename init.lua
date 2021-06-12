@@ -23,6 +23,7 @@ require('lv-rnvimr')
 require('lv-which-key')
 require('lv-lsp-rooter')
 require('lv-zen')
+require('oc-fterm')
 
 -- extras
 if O.extras then
