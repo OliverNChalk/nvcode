@@ -43,3 +43,8 @@ vim.cmd('filetype plugin on') -- filetype detection
 vim.o.guifont = "FiraCode Nerd Font:h17"
 
 -- vim.o.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"
+
+if O.smart_case then
+    vim.cmd("set ignorecase");
+    vim.cmd("set smartcase");
+end

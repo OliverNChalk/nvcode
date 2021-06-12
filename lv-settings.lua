@@ -68,3 +68,6 @@ O.go.autoformat = true
 
 -- Turn off relative_numbers
 -- O.relative_number = false
+
+-- Enable Smart Case
+O.smart_case = true
