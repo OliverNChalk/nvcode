@@ -52,8 +52,8 @@ O.lua.formatter = 'lua-format'
 O.lua.autoformat = false
 
 -- javascript
-O.tsserver.formatter = 'prettier'
-O.tsserver.linter = nil
+O.tsserver.formatter = 'eslint'
+O.tsserver.linter = 'eslint'
 O.tsserver.autoformat = true
 
 -- json
