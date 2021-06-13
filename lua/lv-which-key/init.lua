@@ -54,8 +54,8 @@ vim.api.nvim_set_keymap('n', '<Leader>n', ':set hlsearch!<CR>', {noremap = true,
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- telescope
-local find_command = "rg,--ignore,--hidden,--files,--glob,!.git/*"
-vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files find_command=' .. find_command .. '<CR>',
+local find_command = "find_command=rg,--ignore,--hidden,--glob,!.git/*"
+vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files ' .. find_command .. '<CR>',
     {noremap = true, silent = true})
 
 -- dashboard
@@ -141,12 +141,12 @@ local mappings = {
         c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
         d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
         D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-        f = {"<cmd>Telescope find_files find_command=" .. find_command .. "<cr>", "Find File"},
+        f = {"<cmd>Telescope find_files " .. find_command .. ",--files<cr>", "Find File"},
         m = {"<cmd>Telescope marks<cr>", "Marks"},
         M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
         r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
         R = {"<cmd>Telescope registers<cr>", "Registers"},
-        t = {"<cmd>Telescope live_grep find_command=" .. find_command .. "<cr>", "Text"}
+        t = {"<cmd>Telescope live_grep " .. find_command .. "<cr>", "Text"}
     },
     S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}},
 
