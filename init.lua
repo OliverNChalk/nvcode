@@ -24,6 +24,7 @@ require('lv-which-key')
 require('lv-lsp-rooter')
 require('lv-zen')
 require('oc-fterm')
+require('oc-vim-smoothie')
 
 -- extras
 if O.extras then
