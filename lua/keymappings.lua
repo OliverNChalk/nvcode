@@ -77,6 +77,9 @@ vim.api.nvim_set_keymap("n", "#", "#zz", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "g*", "g*zz", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "g#", "g#zz", {noremap = true, silent = true})
 
+-- Make shift+tab behave
+vim.cmd("inoremap <S-Tab> <C-d>")
+
 -- Ctrl+j/k add a line above/below current line
 -- vim.api.nvim_set_keymap("n", "<C-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", {noremap = true, silent = true})
 -- vim.api.nvim_set_keymap("n", "<C-k>", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", {noremap = true, silent = true})
