@@ -1,10 +1,10 @@
 vim.api.nvim_set_keymap('n', '-', ':RnvimrToggle<CR>', {noremap = true, silent = true})
 
 -- better window movement
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {silent = true})
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
+-- vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
+-- vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
+-- vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {silent = true})
+-- vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
 
 -- TODO fix this
 -- Terminal window navigation
@@ -80,3 +80,6 @@ vim.api.nvim_set_keymap("n", "g#", "g#zz", {noremap = true, silent = true})
 -- Ctrl+j/k add a line above/below current line
 vim.api.nvim_set_keymap("n", "<C-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<C-k>", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", {noremap = true, silent = true})
+
+-- Hacks to be refactored out when possible
+vim.cmd("nmap <Esc> <C-w>o") -- This closes floating windows on escape
