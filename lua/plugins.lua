@@ -91,6 +91,7 @@ return require("packer").startup(function(use)
 
     -- Oliver plugins
     use {"psliwka/vim-smoothie", opt = true}
+    use {"schickling/vim-bufonly", opt = true}
 
     require_plugin("nvim-lspconfig")
     require_plugin("lspsaga.nvim")
@@ -123,6 +124,7 @@ return require("packer").startup(function(use)
     require_plugin("TrueZen.nvim")
     require_plugin("nvim-ts-context-commentstring")
     require_plugin("vim-smoothie")
+    require_plugin("vim-bufonly")
 
     -- Extras
     if O.extras then
