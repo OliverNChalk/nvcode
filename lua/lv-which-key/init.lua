@@ -68,10 +68,6 @@ vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true,
 -- close buffer
 vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
 
--- open projects
-vim.api.nvim_set_keymap('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>",
-                        {noremap = true, silent = true})
-
 -- toggle floating terminal
 vim.api.nvim_set_keymap("n", "<leader>t", ":lua require('FTerm').toggle()<CR>", {noremap = true, silent = true})
 
