@@ -1,1 +1,1 @@
-setl commentstring={/*%s*/} ts=2 sw=2             
+setl commentstring={/*%s*/} ts=4 sw=4             
