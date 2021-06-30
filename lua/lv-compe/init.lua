@@ -22,7 +22,7 @@ require'compe'.setup {
         nvim_lsp = {kind = "   (LSP)"},
         -- nvim_lua = {kind = "  "},
 		nvim_lua = false,
-        spell = {kind = "   (Spell)"},
+        -- spell = {kind = "   (Spell)"},
         tags = false,
         vim_dadbod_completion = true,
         -- snippets_nvim = {kind = "  "},
