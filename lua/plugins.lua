@@ -89,6 +89,9 @@ return require("packer").startup(function(use)
     -- Zen Mode
     use {"Pocco81/TrueZen.nvim", opt = true}
 
+    -- Sane gx for netrw_gx bug
+    -- use {"felipec/vim-sanegx"}
+
     -- Oliver plugins
     use {"psliwka/vim-smoothie", opt = true}
     use {"schickling/vim-bufonly", opt = true}
