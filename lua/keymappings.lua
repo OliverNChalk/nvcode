@@ -78,7 +78,7 @@ vim.cmd 'vnoremap P "0P'
 -- ]])
 
 -- Toggle the QuickFix window
-vim.api.nvim_set_keymap("", "<C-q>", ":call QuickFixToggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("", "<C-q>", ":call QuickFixToggle()<CR>", { noremap = true, silent = true })
 
 -- Oliver Custom Keybinds
 -------------------------
@@ -97,13 +97,3 @@ vim.cmd("inoremap <S-Tab> <C-d>")
 -- Ctrl+j/k add a line above/below current line
 -- vim.api.nvim_set_keymap("n", "<C-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", {noremap = true, silent = true})
 -- vim.api.nvim_set_keymap("n", "<C-k>", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", {noremap = true, silent = true})
-
--- Hacks to be refactored out when possible
--- vim.cmd("nmap <Esc> <cmd>cclose<CR>") -- Bind quickfix close to Escape
-
--- nvim-compe key map
-vim.cmd("inoremap <silent><expr> <C-Space> compe#complete()")
-vim.cmd("inoremap <silent><expr> <CR>      compe#confirm('<CR>')")
-vim.cmd("inoremap <silent><expr> <C-e>     compe#close('<C-e>')")
-vim.cmd("inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })")
-vim.cmd("inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })")

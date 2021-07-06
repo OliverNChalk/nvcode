@@ -93,6 +93,9 @@ vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", { noremap = true
 -- close buffer
 vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", { noremap = true, silent = true })
 
+-- Floating Terminal
+vim.api.nvim_set_keymap("n", "<leader>t", ":lua require'FTerm'.toggle()<CR>", { noremap = true, silent = true })
+
 -- TODO create entire treesitter section
 
 local mappings = {

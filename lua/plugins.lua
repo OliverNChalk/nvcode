@@ -539,7 +539,6 @@ return require("packer").startup(function(use)
       vim.cmd("let g:smoothie_speed_constant_factor = 15")
     end
   }
-  require('oc-vim-smoothie')
 
   for _, plugin in pairs(O.custom_plugins) do
     packer.use(plugin)
