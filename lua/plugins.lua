@@ -531,6 +531,16 @@ return require("packer").startup(function(use)
     disable = not O.plugin.ts_hintobjects.active,
   }
 
+  use {
+    "vim-smoothie",
+    config = function()
+      vim.cmd("let g:smoothie_update_interval = 10")
+      vim.cmd("let g:smoothie_speed_linear_factor = 15")
+      vim.cmd("let g:smoothie_speed_constant_factor = 15")
+    end
+  }
+  require('oc-vim-smoothie')
+
   for _, plugin in pairs(O.custom_plugins) do
     packer.use(plugin)
   end

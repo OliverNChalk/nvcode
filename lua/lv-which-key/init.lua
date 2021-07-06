@@ -57,7 +57,7 @@ local opts = {
 }
 
 -- no hl
-vim.api.nvim_set_keymap("n", "<Leader>h", ':let @/=""<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>n', ':let @/=""<CR>', {noremap = true, silent = true})
 
 -- explorer
 
@@ -78,6 +78,10 @@ if O.plugin.snap.active then
 else
   vim.api.nvim_set_keymap("n", "<Leader>f", ":Telescope find_files<CR>", { noremap = true, silent = true })
 end
+-- telescope find hidden files
+-- local find_command = "find_command=rg,--ignore,--hidden,--glob,!.git/*"
+-- vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files ' .. find_command .. '<CR>',
+--     {noremap = true, silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap("n", "<Leader>;", ":Dashboard<CR>", { noremap = true, silent = true })
@@ -98,6 +102,7 @@ local mappings = {
   ["e"] = "Explorer",
   ["f"] = "Find File",
   ["h"] = "No Highlight",
+  ["t"] = "Floating Terminal",
   b = {
     name = "Buffers",
     j = { "<cmd>BufferPick<cr>", "jump to buffer" },
