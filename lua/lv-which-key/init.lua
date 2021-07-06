@@ -104,7 +104,7 @@ local mappings = {
   ["c"] = "Close Buffer",
   ["e"] = "Explorer",
   ["f"] = "Find File",
-  ["h"] = "No Highlight",
+  ["n"] = "No Highlight",
   ["t"] = "Floating Terminal",
   b = {
     name = "Buffers",
@@ -205,20 +205,22 @@ local mappings = {
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
-      "Document Diagnostics",
-    },
+    d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Jump to Definition" },
+    -- d = {
+    --   "<cmd>Telescope lsp_document_diagnostics<cr>",
+    --   "Document Diagnostics",
+    -- },
     w = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
     f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    j = { "<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = O.lsp.popup_border}})<cr>", "Next Diagnostic" },
-    k = { "<cmd>lua vim.lsp.diagnostic.goto_prev({popup_opts = {border = O.lsp.popup_border}})<cr>", "Prev Diagnostic" },
+    n = { "<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = O.lsp.popup_border}})<cr>", "Next Diagnostic" },
+    N = { "<cmd>lua vim.lsp.diagnostic.goto_prev({popup_opts = {border = O.lsp.popup_border}})<cr>", "Prev Diagnostic" },
     q = { "<cmd>Telescope quickfix<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    r = { "<cmd>lua vim.lsp.buf.references()<CR>", "Show References" },
+    R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = {
       O.plugin.symbol_outline.active and "<cmd>SymbolsOutline<cr>" or "<cmd> Telescope lsp_document_symbols<cr>",
       "Document Symbols",
@@ -241,12 +243,14 @@ local mappings = {
     --     "Workspace Diagnostics"
     -- },
     f = { O.plugin.snap.active and "<cmd>Snap find_files<cr>" or "<cmd>Telescope find_files<cr>", "Find File" },
+    -- t = {"<cmd>Telescope find_files find_command=" .. find_command .. "<cr>", "Text"}
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     -- m = {"<cmd>Telescope marks<cr>", "Marks"},
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
     r = { O.plugin.snap.active and "<cmd>Snap oldfiles<cr>" or "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     t = { O.plugin.snap.active and "<cmd>Snap live_grep<cr>" or "<cmd>Telescope live_grep<cr>", "Text" },
+    -- t = {"<cmd>Telescope live_grep find_command=" .. find_command .. "<cr>", "Text"}
   },
   S = {
     name = "Session",

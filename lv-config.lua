@@ -27,7 +27,7 @@ O.lang.lua.autoformat = false
 O.lang.lua.formatter = 'lua-format'
 
 -- javascript
-O.lang.tsserver.formatter = 'eslint'
+O.lang.tsserver.formatter = 'eslint_d'
 O.lang.tsserver.linter = nil
 O.lang.tsserver.autoformat = true
 

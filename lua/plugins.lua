@@ -532,7 +532,7 @@ return require("packer").startup(function(use)
   }
 
   use {
-    "vim-smoothie",
+    "psliwka/vim-smoothie",
     config = function()
       vim.cmd("let g:smoothie_update_interval = 10")
       vim.cmd("let g:smoothie_speed_linear_factor = 15")
