@@ -189,10 +189,6 @@ local mappings = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Jump to Definition" },
-    -- d = {
-    --   "<cmd>Telescope lsp_document_diagnostics<cr>",
-    --   "Document Diagnostics",
-    -- },
     w = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
@@ -231,8 +227,8 @@ local mappings = {
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
-    -- t = {"<cmd>Telescope live_grep find_command=" .. find_command .. "<cr>", "Text"}
     t = { "<cmd>Telescope live_grep<cr>", "Text" },
+    -- t = {"<cmd>Telescope live_grep find_command=" .. find_command .. "<cr>", "Text"}
   },
   S = {
     name = "Session",
