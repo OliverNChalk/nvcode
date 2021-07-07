@@ -35,4 +35,4 @@ require("lspconfig").tsserver.setup {
   },
 }
 require("lsp.ts-fmt-lint").setup()
-vim.cmd "setl ts=2 sw=2"
+vim.cmd "setl ts=4 sw=4"

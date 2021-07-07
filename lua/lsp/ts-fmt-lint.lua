@@ -17,6 +17,15 @@ M.setup = function()
         }
     end
 
+    local eslint_d = {
+        lintCommand = "eslint_d -f unix --stdin --stdin-filename ${INPUT}",
+        lintStdin = true,
+        lintFormats = {"%f:%l:%c: %m"},
+        lintIgnoreExitCode = true,
+        formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}",
+        formatStdin = true
+    }
+
     require"lspconfig".efm.setup {
         -- init_options = {initializationOptions},
         cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
@@ -25,10 +34,10 @@ M.setup = function()
         settings = {
             rootMarkers = {".git/", "package.json"},
             languages = {
-                html = {prettier},
-                css = {prettier},
-                json = {prettier},
-                yaml = {prettier}
+                html = {eslint_d},
+                css = {eslint_d},
+                json = {eslint_d},
+                yaml = {eslint_d},
             }
         }
     }
