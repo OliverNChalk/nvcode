@@ -366,7 +366,6 @@ return require("packer").startup(function(use)
       vim.cmd("let g:smoothie_speed_linear_factor = 15")
       vim.cmd("let g:smoothie_speed_constant_factor = 15")
     end,
-    opt = true,
   }
 
   use {
@@ -377,7 +376,6 @@ return require("packer").startup(function(use)
       vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
       vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
     end,
-    opt = true,
   }
 
   for _, plugin in pairs(O.user_plugins) do
