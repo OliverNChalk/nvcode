@@ -2,16 +2,16 @@
 
 -- general
 O.auto_complete = true
-O.relative_number = false
 O.colorscheme = 'spacegray'
 O.timeoutlen = 100
 O.leader_key = ' '
+O.hl_search = true
 
 -- After changing plugin config it is recommended to run :PackerCompile
 O.plugin.colorizer.active = true
 O.plugin.trouble.active = true
--- O.plugin.markdown_preview.active = true
 O.plugin.floatterm.active = true
+-- O.plugin.markdown_preview.active = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = "all"
