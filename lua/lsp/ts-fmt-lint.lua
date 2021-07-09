@@ -10,6 +10,14 @@ M.setup = function()
         formatStdin = true
     }
 
+    local eslint_d = {
+        lintCommand = "eslint_d -f unix --stdin --stdin-filename ${INPUT}",
+        lintStdin = true,
+        lintIgnoreExitCode = true,
+        formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}",
+        formatStdin = true
+    }
+
     if vim.fn.glob("node_modules/.bin/prettier") ~= "" then
         prettier = {
             formatCommand = "./node_modules/.bin/prettier --stdin-filepath ${INPUT}",
@@ -27,8 +35,12 @@ M.setup = function()
             languages = {
                 html = {prettier},
                 css = {prettier},
-                json = {prettier},
-                yaml = {prettier}
+                json = {eslint_d},
+                yaml = {prettier},
+                javascript = {eslint_d},
+                javascriptreact = {eslint_d},
+                typescript = {eslint_d},
+                typescriptreact = {eslint_d},
             }
         }
     }
