@@ -6,6 +6,10 @@ O.colorscheme = 'spacegray'
 O.timeoutlen = 100
 O.leader_key = ' '
 O.hl_search = true
+-- This approach to formatting on save is very slow and cringe
+-- However, neovim loads slowly if we disable format_on_save
+-- Hopefully, a faster format_on_save approach will be merged upstream
+-- O.format_on_save = false
 
 -- After changing plugin config it is recommended to run :PackerCompile
 O.plugin.colorizer.active = true
